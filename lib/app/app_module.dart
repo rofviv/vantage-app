@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:meddefend_app/app/shared/utils/utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'bloc/blocs.dart';
@@ -7,8 +8,6 @@ import 'domain/interceptors/default_interceptor.dart';
 import 'domain/repositories/repositories.dart';
 import 'guards/app_guards.dart';
 import 'modules/modules.dart';
-
-const baseUrl = "https://www.vantagesports.com";
 
 class AppModule extends Module {
   @override
@@ -18,7 +17,7 @@ class AppModule extends Module {
         (i) => PreferencesRepositoryImpl(i<SharedPreferences>())),
     Bind.lazySingleton(
         (i) => DefaultInterceptor(i<PreferencesRepositoryImpl>())),
-    Bind.lazySingleton((i) => Dio(BaseOptions(baseUrl: baseUrl))
+    Bind.lazySingleton((i) => Dio(BaseOptions(baseUrl: BASE_URL))
       ..interceptors.add(i<DefaultInterceptor>())),
     Bind.lazySingleton((i) => AuthRepositoryImpl(i<Dio>())),
     Bind.singleton((i) => LanguageBloc()),
@@ -32,6 +31,18 @@ class AppModule extends Module {
       SplashModule.route,
       module: SplashModule(),
       guards: [AppGuard()],
+    ),
+    ModuleRoute(
+      LoginModule.route,
+      module: LoginModule(),
+    ),
+    ModuleRoute(
+      OnboardingModule.route,
+      module: OnboardingModule(),
+    ),
+     ModuleRoute(
+      OnboardingAdvocateModule.route,
+      module: OnboardingAdvocateModule(),
     ),
     ModuleRoute(
       RootModule.route,

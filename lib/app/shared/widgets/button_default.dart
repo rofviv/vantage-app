@@ -1,40 +1,52 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/colors.dart';
-import '../../theme/text_style.dart';
+import '../shared.dart';
 
 class ButtonDefaultShared extends StatelessWidget {
   const ButtonDefaultShared({
     super.key,
     required this.title,
-    this.elevation = 0,
-    this.width = 250,
-    this.color = primary,
     required this.onTap,
+    this.height,
+    this.width,
   });
 
   final String title;
-  final Color color;
   final Function()? onTap;
-  final double elevation, width;
+  final double? height, width;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      child: MaterialButton(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 30,
-          vertical: 12,
+    return Container(
+      height: height ?? maxHeigt(context) * .06,
+      width: width ?? maxWidth(context) * .85,
+      decoration: BoxDecoration(
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black26,
+            offset: Offset(0, 4),
+            blurRadius: 5.0,
+          ),
+        ],
+        gradient: gradientButton,
+        color: Colors.deepPurple.shade300,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: ElevatedButton(
+        style: ButtonStyle(
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+          backgroundColor: MaterialStateProperty.all(Colors.transparent),
+          shadowColor: MaterialStateProperty.all(Colors.transparent),
         ),
-        elevation: elevation,
-        color: color,
-        textColor: white,
-        disabledColor: grey20,
-        disabledTextColor: grey,
-        shape: const StadiumBorder(),
         onPressed: onTap,
-        child: Text(title, style: paragraphBold),
+        child: Text(
+          title,
+          style: paragraphBold,
+        ),
       ),
     );
   }

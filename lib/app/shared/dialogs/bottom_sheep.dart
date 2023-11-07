@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/colors.dart';
+import '../theme/colors.dart';
 
 abstract class BottomSheep {
   static void show(

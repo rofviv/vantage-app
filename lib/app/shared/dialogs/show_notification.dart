@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:overlay_support/overlay_support.dart';
 
-import '../../theme/colors.dart';
+import '../theme/colors.dart';
 
 void showNotification(String text,
     {required Color foreground, required Color background}) {

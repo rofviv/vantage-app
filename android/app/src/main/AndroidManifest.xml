@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.vantage_app">
+    package="com.example.meddefend_app">
    <application
-        android:label="vantage_app"
+        android:label="meddefend_app"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/text_style.dart';
+import '../theme/text_style.dart';
 
 class HeaderDefaultShared extends StatelessWidget {
   const HeaderDefaultShared({

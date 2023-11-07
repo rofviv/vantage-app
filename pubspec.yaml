@@ -1,4 +1,4 @@
-name: vantage_app
+name: meddefend_app
 description: A new Flutter project.
 
 publish_to: "none"
@@ -20,17 +20,19 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_modular: ^5.0.3
-  intl: ^0.17.0
+  flutter_svg: ^2.0.9
+  font_awesome_flutter: ^10.6.0
+  intl: ^0.18.0
   overlay_support: ^2.1.0
   shared_preferences: ^2.0.18
   shimmer: ^2.0.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.12.0
-  flutter_test:
-    sdk: flutter
 
   flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
 
 flutter_icons:
   android: "launcher_icon"
@@ -43,7 +45,7 @@ flutter:
   generate: true
   assets:
     - assets/images/
-
+    - assets/icons/
   # fonts:
   #   - family: Schyler
   #     fonts:

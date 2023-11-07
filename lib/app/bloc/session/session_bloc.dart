@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:vantage_app/app/domain/repositories/repositories.dart';
+import 'package:meddefend_app/app/domain/repositories/repositories.dart';
 
 part 'session_event.dart';
 part 'session_state.dart';

@@ -33,7 +33,8 @@ class SplashController {
     if (kDebugMode) {
       print("AccessToken: $token");
     }
-    Modular.to.navigate(RootModule.route + HomeModule.route.substring(1));
+    // Modular.to.navigate(RootModule.route + DashboardModule.route.substring(1));
+    Modular.to.navigate(LoginModule.route);
   }
 
   Future<void> _loadPreferences() async {

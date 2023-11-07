@@ -1,4 +1,4 @@
-package com.example.vantage_app
+package com.example.meddefend_app
 
 import io.flutter.embedding.android.FlutterActivity
 

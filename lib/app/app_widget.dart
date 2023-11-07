@@ -5,7 +5,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import 'theme/app_theme.dart';
+import 'shared/theme/app_theme.dart';
 import 'bloc/blocs.dart';
 import 'l10n/l10n.dart';
 
@@ -26,7 +26,7 @@ class AppWidget extends StatelessWidget {
                   : SystemUiOverlayStyle.dark,
               child: MaterialApp.router(
                 debugShowCheckedModeBanner: false,
-                title: "Mobile app",
+                title: "MedDefend app",
                 supportedLocales: L10n.all,
                 theme: lightTheme,
                 darkTheme: darkTheme,

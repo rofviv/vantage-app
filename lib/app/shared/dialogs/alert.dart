@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/text_style.dart';
+import '../theme/text_style.dart';
 
 abstract class Alert {
   static Future<void> show(
